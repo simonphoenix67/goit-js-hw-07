@@ -2,7 +2,7 @@ import { galleryItems } from './gallery-items.js';
 
 console.log(galleryItems);
 
-const gallery = document.querySelectorAll('.gallery');
+const gallery = document.querySelector('.gallery');
 const items = [];
 
 galleryItems.forEach(element => {
@@ -24,5 +24,6 @@ galleryItems.forEach(element => {
 gallery.append(...items);
 
 new SimpleLightbox('.gallery a', {
-  captionDelay: 250;
+  captionDelay: 250,
+  captionsData: 'alt'
 })
